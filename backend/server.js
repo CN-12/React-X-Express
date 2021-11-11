@@ -3,12 +3,13 @@ const path = require("path");
 const app = express();
 const port = 8080;
 
-app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}`);
+const http = require("http").createServer(app);
+http.listen(port, function () {
+  console.log(`Listening on http://localhost:${port}`);
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "frontend/build/")));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+  res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
 });
