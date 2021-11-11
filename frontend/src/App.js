@@ -1,20 +1,19 @@
-import { Route, Routes, Switch } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
-import Page404 from "./components/Page404";
+import { Outlet, Link } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
     <div>
-      <Switch>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" component={<Page404 />} />
-        </Routes>
-      </Switch>
+      <h1>Bookkeeper</h1>
+      <nav
+        style={{
+          borderBottom: "solid 1px",
+          paddingBottom: "1rem",
+        }}
+      >
+        <Link to="/invoices">Invoices</Link> |{" "}
+        <Link to="/expenses">Expenses</Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
-
-export default App;

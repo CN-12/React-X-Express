@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React from "react";
+import { useLocation } from "react-router-dom";
 
-class Page404 extends Component {
-  render() {
-    return (
-      <div>
-        잘못된 접근 데스요
-      </div>
-    );
-  }
-}
+const NoMatch = () => {
+  let location = useLocation();
 
-export default Page404;
+  return (
+    <div>
+      <h3>
+        No match for <code>{location.pathname}</code>
+      </h3>
+    </div>
+  );
+};
+
+export default NoMatch;
