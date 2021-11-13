@@ -1,2 +1,2 @@
 
-# React X Express 연습중
+# React, Express 연습중
