@@ -11,7 +11,7 @@ export default function App() {
         }}
       >
         <Link to="/">Home</Link> | <Link to="/invoices">Invoices</Link> |{" "}
-        <Link to="/expenses">Expenses</Link>
+        <Link to="/expenses">Expenses</Link> | <Link to="/123">404</Link>
       </nav>
       <Outlet />
     </div>
