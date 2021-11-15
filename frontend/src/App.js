@@ -7,12 +7,12 @@ export default function App() {
     <div>
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home" id="Logo_Main">
+          <Navbar.Brand href="/" id="Logo_Main">
             Pastel <span id="star">*</span> Palletes
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="introduce">스토리 소개</Nav.Link>
-            <Nav.Link href="expenses">멤버 소개</Nav.Link>
+            <Nav.Link href="story">스토리 소개</Nav.Link>
+            <Nav.Link href="member">멤버 소개</Nav.Link>
             <Nav.Link href="deck">속성별 완덱</Nav.Link>
             <Nav.Link href="illust">인기 일러스트 모음</Nav.Link>
           </Nav>
