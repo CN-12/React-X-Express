@@ -1,18 +1,20 @@
-// import Perfect from "../image/사복아야.png";
-import data from "../data/data.json";
+import data from "../data/data";
 
-export default function illustration() {
+function Illustration({ name, image }) {
   return (
-    <main style={{ padding: "1rem 0" }}>
-      <ul className="list_day">
-        {data.images.map(
-          (
-            images // 맵함수를 이용해 dummy 안의 days 그룹 내의 원소를 검색한다.
-          ) => (
-            <img src={data.images} alt="dlalwl" />
-          )
-        )}
-      </ul>
-    </main>
+    <div>
+      <img src={image} alt="뱅드림 사진" />
+      <h2>{name}</h2>
+    </div>
+  );
+}
+
+export default function Illust() {
+  return (
+    <div>
+      {data.map((data, index) => (
+        <Illustration key={index} name={data.name} image={data.image} />
+      ))}
+    </div>
   );
 }

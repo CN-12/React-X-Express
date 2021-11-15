@@ -10,7 +10,16 @@
 a {
   text-decoration: none;
 }
-
+#title {
+  margin-bottom: 50px;
+}
+#h1title {
+  margin-top: 100px;
+}
+#lastWord {
+  display: block;
+  margin-bottom: 400px;
+}
 @font-face {
   font-family: "SF_HambakSnow";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff")
