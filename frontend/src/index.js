@@ -1,19 +1,19 @@
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Home from "./routes/Home";
-import Expenses from "./routes/exprenses";
-import Invoices from "./routes/invoices";
-import NotFound from "./routes/NotFound";
+import Main from "./routes/main";
+import Member from "./routes/member";
+import Deck from "./routes/deck";
+import NotFound from "./routes/notFound";
 const rootElement = document.getElementById("root");
 render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="*" element={<NotFound />} />
-        <Route path="" element={<Home />} />
-        <Route path="expenses" element={<Expenses />} />
-        <Route path="invoices" element={<Invoices />} />
+        <Route path="" element={<Main />} />
+        <Route path="expenses" element={<Member />} />
+        <Route path="deck" element={<Deck />} />
       </Route>
     </Routes>
   </BrowserRouter>,

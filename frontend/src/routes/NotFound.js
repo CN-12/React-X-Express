@@ -1,6 +1,6 @@
-export default function Invoices() {
+export default function NotFound() {
   return (
-    <main style={{ padding: "1rem 0" }}>
+    <main style={{ textAlign: "center" }}>
       <h2>404</h2>
     </main>
   );
