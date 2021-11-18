@@ -8,6 +8,7 @@ import Member from "./routes/member";
 import Deck from "./routes/deck";
 import Illustration from "./routes/illustration";
 import Write from "./routes/write"
+import Ok from './routes/ok'
 import NotFound from "./routes/notFound";
 const rootElement = document.getElementById("root");
 render(
@@ -21,6 +22,7 @@ render(
         <Route path="deck" element={<Deck />} />
         <Route path="illust" element={<Illustration />} />
         <Route path="write" element={<Write />} />
+        <Route path="ok" element={<Ok />} />
       </Route>
     </Routes>
   </BrowserRouter>,
