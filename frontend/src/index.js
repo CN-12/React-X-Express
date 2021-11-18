@@ -7,6 +7,7 @@ import Story from "./routes/story";
 import Member from "./routes/member";
 import Deck from "./routes/deck";
 import Illustration from "./routes/illustration";
+import Write from "./routes/write"
 import NotFound from "./routes/notFound";
 const rootElement = document.getElementById("root");
 render(
@@ -19,6 +20,7 @@ render(
         <Route path="story" element={<Story />} />
         <Route path="deck" element={<Deck />} />
         <Route path="illust" element={<Illustration />} />
+        <Route path="write" element={<Write />} />
       </Route>
     </Routes>
   </BrowserRouter>,
