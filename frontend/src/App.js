@@ -18,9 +18,10 @@ export default function App() {
           </Nav>
         </Container>
       </Navbar>
+      <div className="btn"></div>
 
       <Outlet />
-
+      <div></div>
       <script
         src="https://unpkg.com/react/umd/react.production.min.js"
         crossOrigin="true"
