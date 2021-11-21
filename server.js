@@ -7,13 +7,13 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 const MongoClient = require("mongodb").MongoClient;
+// const { readFile } = require("fs/promises");
 
 var db;
 MongoClient.connect(
   "mongodb+srv://admin:qwer1234@cluster0.rjy7d.mongodb.net/react?retryWrites=true&w=majority",
   function (err, client) {
     if (err) return console.log(err);
-
     db = client.db("react");
     app.listen(port, function () {
       console.log(`listening on http://localhost:${port}`);
@@ -38,9 +38,9 @@ app.post("/add", function (req, res) {
   };
   db.collection("post").insertOne(info, function (err, res) {
     if (err) return err;
-    console.log("저장 완료");
-    console.log(req.body.title);
-    console.log(req.body.date);
+    console.log("\n---저장 완료---\n");
+    console.log("id : " + req.body.title);
+    console.log("pw : " + req.body.date + "\n");
   });
-  res.send("ok");
+  return res.redirect("/ok");
 });
