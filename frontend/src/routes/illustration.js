@@ -2,9 +2,9 @@ import data from "../data/data";
 
 function Illustration({ name, image }) {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <img src={image} alt="뱅드림 사진" />
-      <h2>{name}</h2>
+      <h2 style={{ marginTop: "30px" }}>{name}</h2>
     </div>
   );
 }
